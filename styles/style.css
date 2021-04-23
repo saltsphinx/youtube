@@ -2,5 +2,33 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* font-size: "Roboto"; */
+  font-size: "Roboto";
+}
+
+body {
+  margin: 0;
+}
+
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minxmax(250px, 1fr));
+  gap: 3rem 0;
+  margin: 0 1.5rem;
+  border-top: 4px solid #ccc;
+}
+
+.thumbnail {
+  position: relative;
+  display: flex;
+}
+
+.thumbnail::before {
+  content: attr(data-duration);
+  position: absolute;
+  background: #222;
+  color: #fff;
+  right: 5px;
+  bottom: 5px;
+  padding: 0.1me 0.3em;
+  font-size: 0.9rem;
 }
